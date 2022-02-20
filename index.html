@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.min.css">
+    <style>
+        .page-link:hover{
+            cursor: pointer;
+        }
+    </style>        
+</head>
+<body>
+    <div id="loader" class="fullscreen loader loader__show">
+    
+    </div>
+
+
+  <header class="container">
+    <div class="navbar">
+        <img class="navbar__logo" src="./img/logoo.png" alt="">
+        <form id="search-form" class="navbar__form" >
+            <img src="./img/search.png" alt="">
+            <input placeholder="Search books"  id="search" class="navbar__form__input" type="search">
+            <button class="btn btn-success" type="submit">jonat</button>
+        </form>
+        <button id="logaut" class="navbar__button">log out</button>
+    </div>
+    
+  </header>
+  <main>
+      <section >
+        <div class="result">
+            <div class="container d-flex justify-content-between align-items-center">
+                <div class="result2">
+                    <p>Showing </p>
+                    <span></span>
+                    <p>Result(s)</p>
+                </div>
+                <div class="btn-filtr">
+                    <img src="./img/btn.png" alt="">
+                    Order by newest
+                </div>
+            </div>
+        </div>
+      </section>
+  </main>
+   
+  
+        
+</div>
+
+    <div class=" d-flex justify-content-between">
+        <div class="cardss">
+            <h1>Bookmarks</h1>
+            <p>If you don’t like to read, you haven’t found the right book</p>
+            <div class="bookss__marks">
+                <ul>
+                    <template id="bookmarktemplete">
+                    <div class="bookMark">
+                        <div>
+                            <h1 class="bkname">Python</h1>
+                            <p class="bkauthor">David M. Beazley</p>
+                        </div>
+                        <img src="./img/book-open 1.png" alt="">
+                        <img src="./img/delete 1.png" alt="">
+                    </div>
+                </template>
+                </ul>
+            </div>
+        </div>
+        <div class="cards">
+            <ul id="bookul" class="row justify-content-evenly"></ul>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                  <li class="page-item" id="prev-btn"><div class="page-link" href="#">Previous</div></li>
+                  <li class="page-item" id="next-btn"><div class="page-link" href="#">Next</div></li>
+                </ul>
+            </nav>
+        
+        </div>
+
+     
+    </div>
+
+
+    
+
+<template id="book-template">
+   
+    <div class="books justify-content-between col-4">
+        <div class="books__img">
+            <img id="book-img" src="./img/sichqon.png" alt="">
+        </div>
+        <h1 class="books__name">Python</h1>
+        <p class="books__autor">David M. Beazley</p>
+        <p class="books__date">2009</p>
+       <div class="books__item">
+        <div class="books__item__mark">Bookmark</div> <div id="toggle" class="books__item__info">More Info</div>
+
+
+        <div id="navbar" class="toggle">
+
+            <h1  class="toggle__type">Python</h1>
+            <img class="toggle__img" src="./img/boooook.png" alt=""> 
+            <P class="toggle__deck">Culpa nulla pariatur cupidatat nisi incididunt ea do ipsum. Incididunt quis mollit elit commodo cillum eiusmod reprehenderit labore irure. Cillum et incididunt et nostrud exercitation quis aute laboris non ut adipisicing. Laboris ad minim aute nulla proident deserunt velit anim sunt aliquip ut sit. Exercitation aliquip ullamco officia non aliqua. Sint deserunt aliquip veniam id eiusmod sit consectetur mollit ea aliqua officia consequat. Magna non mollit nisi est commodo voluptate aute id. Deserunt nostrud id do in nisi mollit deserunt non. Pariatur fugiat cillum irure elit sint nisi ad ipsum culpa deserunt cupidatat esse consequat laboris. Id aliquip non consectetur esse proident duis Lorem.</P>
+            <div class="info">
+                <p class="infosname">Author: </p>  <span id="authors" class="infos">Jamal Kasper</span>  
+            </div>
+            <div class="info">
+                <p class="infosname">Published: </p>  <span id="publishedDate" class="infos">Jamal Kasper</span>  
+            </div>
+            <div class="info">
+                <p class="infosname">Publishers: </p>  <span id="publisher" class="infos">Jamal Kasper</span>  
+            </div>
+            <div class="info">
+                <p class="infosname">Categories: </p>  <span id="categories" class="infos">Jamal Kasper</span>  
+            </div>
+            <div class="info">
+                <p class="infosname">Pages Count: </p>  <span id="pageCount" class="infos">Jamal Kasper</span>  
+            </div>
+
+        </div>
+       </div>
+    </div>
+</template>
+   
+</body>
+
+<script src="./js/check-login.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/moreinfo.js"></script>
+
+</html>
